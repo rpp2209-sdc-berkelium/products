@@ -1,0 +1,26 @@
+{
+  "name": "products",
+  "version": "1.0.0",
+  "description": "The products API service for Project Atelier",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rpp2209-sdc-berkelium/products.git"
+  },
+  "author": "CJ Edgecombe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rpp2209-sdc-berkelium/products/issues"
+  },
+  "homepage": "https://github.com/rpp2209-sdc-berkelium/products#readme",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}
