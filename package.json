@@ -4,7 +4,7 @@
   "description": "The products API service for Project Atelier",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose",
     "server-dev": "npx nodemon --watch server server/index.js"
   },
   "repository": {
