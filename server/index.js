@@ -1,9 +1,13 @@
 require('dotenv').config();
 const express = require('express');
-const app = express();
+const products = require('./routes');
 const port = process.env.SERVER_PORT || 8080;
-const db = require('../db')
+
+const app = express();
 app.use(express.json());
+
+// use the routes defined in server/routes.js
+app.use('/products', products);
 
 
 app.listen(port, () => {
