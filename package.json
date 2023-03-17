@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose",
+    "test-coverage": "jest --coverage --verbose",
     "server-dev": "npx nodemon --watch server server/index.js"
   },
   "repository": {
