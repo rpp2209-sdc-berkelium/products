@@ -60,12 +60,19 @@ router.get('/:id/styles', async (req, res) => {
     (SELECT json_agg(p) AS photos FROM (SELECT photos.thumbnail_url, photos.url FROM photos WHERE photos.style_id = s.style_id) AS p), \
     (SELECT json_agg(skus) AS skus FROM skus WHERE s.style_id = skus.style_id) FROM styles AS s WHERE product_id = $1;', [id]);
 
-    // apply the sku formatting function to each array of skus in the style list
+    // if skus exist for any of the styles, apply the sku formatting function to each array of skus in the style list
     for (let style of styleList.rows) {
+      if (style.skus) {
       style.skus = formatSkus(style.skus);
+      }
     }
 
-    res.status(200).send(styleList.rows);
+    // create a payload with a 'results' key. The client is looking for this 'results' property, the front-end will break without it
+    const payload = {
+      results: styleList.rows
+    }
+
+    res.status(200).send(payload);
   } catch (e) {
     console.log('products/:id/styles route error', e);
     res.sendStatus(500);
