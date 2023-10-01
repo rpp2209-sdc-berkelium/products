@@ -1,14 +1,10 @@
 # Products Microservice
 
 ## Overview
-This repository contains the products microservice for the Atelier e-commerce clothing website. It features API endpoints for the complete product list, individual product information, the styles associated with any given product, and the related products for any given product. An NGINX load balancer is used to manage requests across five independent server instances and is cabable of sustaining a rate of 1800 requests per second.
+This repository contains the products microservice for the Atelier e-commerce clothing website. It features API endpoints for the complete product list, individual product information, the styles associated with any given product, and the related products for any given product. An NGINX load balancer is used to manage requests across five independent AWS EC2 server instances and is cabable of sustaining a rate of 1800 requests per second.
 
-!("./service diagram.png")
+![service diagram](service-diagram.png)
 
-## Table of Contents
-- Description and Endpoints
-- Getting Started
-- Usage
 
 ## Description and Endpoints
 This microservice provides all product information for the Atelier catalog. There are four inputs that allow the retrieval of product-related data.
@@ -17,5 +13,5 @@ This microservice provides all product information for the Atelier catalog. Ther
 - **/products/:id/styles**: Using this enpoint with a specific product ID will return all styles and style information associated with that particular product, including the style ID, productd ID, name, style SKU, style photos, sale price, original price, and the default style.
 - **/products/:id/related**: Using the endpoint with a specific product ID will return a list of all related products.
 
-## Geting Started
+
 
