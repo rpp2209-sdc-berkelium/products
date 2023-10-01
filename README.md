@@ -13,5 +13,9 @@ This microservice provides all product information for the Atelier catalog. Ther
 - **/products/:id/styles**: Using this enpoint with a specific product ID will return all styles and style information associated with that particular product, including the style ID, productd ID, name, style SKU, style photos, sale price, original price, and the default style.
 - **/products/:id/related**: Using the endpoint with a specific product ID will return a list of all related products.
 
+---
+
+**For installation: `npm install` followed by `npm run start`.**
+
 
 
