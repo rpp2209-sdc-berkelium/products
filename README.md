@@ -3,7 +3,7 @@
 ## Overview
 This repository contains the products microservice for the Atelier e-commerce clothing website. It features API endpoints for the complete product list, individual product information, the styles associated with any given product, and the related products for any given product. An NGINX load balancer is used to manage requests across five independent server instances and is cabable of sustaining a rate of 1800 requests per second.
 
-![Service Digram](./service diagram.png)
+!("./service diagram.png")
 
 ## Table of Contents
 - Description and Endpoints
